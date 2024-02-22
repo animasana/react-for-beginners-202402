@@ -2,3 +2,5 @@ export const API_URL = `https://yts.mx/api/v2/list_movies.json?minimum_rating=8.
 export function getMovieURL(id) {
   return `https://yts.mx/api/v2/movie_details.json?movie_id=${id}`;
 }
+
+export const REPOSITORY = '/react-for-beginners-202402';

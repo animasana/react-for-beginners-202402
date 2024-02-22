@@ -1,11 +1,12 @@
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
+import { REPOSITORY } from '../constants';
 
 export default function Movie({ id, coverImg, title, summary, genres }) {
   return (
     <div>      
-      <h1><Link to={`/movie/${id}`}>{title}</Link></h1>
-      <Link to={`/movie/${id}`}><img src={coverImg} alt={title}/></Link>
+      <h1><Link to={`${REPOSITORY}/movie/${id}`}>{title}</Link></h1>
+      <Link to={`${REPOSITORY}/movie/${id}`}><img src={coverImg} alt={title}/></Link>
       <p>{summary?.substr(0, 300)}...</p>
       <ul>
         {genres.map(genre => <li key={genre}>{genre}</li>)}
